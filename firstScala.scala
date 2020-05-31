@@ -2,6 +2,9 @@ package new1
 
 import scala.util.control.Breaks._
 import scala.io.Source
+import java.io.File
+import java.io.{BufferedWriter, FileWriter, File, PrintWriter}
+
 object firstScala {
   def main(args:Array[String]){
 
@@ -17,8 +20,6 @@ object firstScala {
     
    for(line <- Source.fromFile("pi.txt").getLines())
    {
-    
-     
      count+=1
      if(count>21)
      {
@@ -42,16 +43,11 @@ object firstScala {
             
           }
           n=n+50
-        }
-        //println(line)
+        }  
      }
     
    }
-//    for(i<-0 until 100000000)
-//    {
-//      print(newArr(i))
-//    }
-    search(newArr,"880526")
+    search(newArr,"971120")
     
   }
 
@@ -75,12 +71,30 @@ object firstScala {
       
           if(j==n) 
           {
-            println("Pattern found the index "+i)
-          }
+            
+           // println("Pattern found in index: "+i)
+            val fw=new FileWriter("Naive.txt",true);
+            fw.write("pattern found in index : "+i+"\n")   
+            fw.close()
+          } 
+//            val pw=new PrintWriter(new File("Naive1.txt"))
+//            pw.write("pattern found in "+x +" line and "+y+" index")
+//            pw.close
+            
+            
+            
+           
+//             val file =new File("Naive.txt")
+//             val bw=new BufferedWriter(new FileWriter("Naive.txt"))
+//             bw.write("Pattern found in index: "+i)
+//             bw.close()
+//            
+//             
+          
         
       }
        
-     }
-   
     }
+   
+  }
 } 
