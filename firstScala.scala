@@ -67,31 +67,13 @@ object firstScala {
       while(j<n && txt(i+j)== pat.charAt(j))
       {
          j=j+1 
-       
       
           if(j==n) 
           {
-            
-           // println("Pattern found in index: "+i)
             val fw=new FileWriter("Naive.txt",true);
             fw.write("pattern found in index : "+i+"\n")   
             fw.close()
-          } 
-//            val pw=new PrintWriter(new File("Naive1.txt"))
-//            pw.write("pattern found in "+x +" line and "+y+" index")
-//            pw.close
-            
-            
-            
-           
-//             val file =new File("Naive.txt")
-//             val bw=new BufferedWriter(new FileWriter("Naive.txt"))
-//             bw.write("Pattern found in index: "+i)
-//             bw.close()
-//            
-//             
-          
-        
+          }  
       }
        
     }
